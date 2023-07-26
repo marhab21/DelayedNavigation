@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct LoginInfo: Hashable {
+struct LoginInfo {
     var name: String
     var password: String
 

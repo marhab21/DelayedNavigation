@@ -40,9 +40,10 @@ struct ContentView: View {
                     }
                 }
                 .navigationTitle("Login")
-                .navigationDestination(for: String.self) { route in
-                    switch route {
+                .navigationDestination(for: String.self) { progress in
+                    switch progress {
                     case "finished":
+                        // wrappedValue is the underlying value referenced by the binding variable. 
                         OnboardView(message:"User credentials are \($authentication.status.wrappedValue)" )
                     default:
                         EmptyView()
